@@ -1,8 +1,8 @@
 # coding: utf-8
 
+from tkinter import *
 from graph import *
 import math
-
 
 
 
@@ -16,7 +16,7 @@ brushColor(242,178,103)
 rectangle(0, 105, 500, 350)
 
 penColor("Black")
-brushColor(19,166,50)
+brushColor('#66CC66')
 rectangle(0, 350, 500, 750)
 x = 0
 for i in range(15):
@@ -44,6 +44,14 @@ def elips(x,y,a,b):
         q.append((x + a * math.cos(2 * math.pi * i / n), y +b * math.sin(2 * math.pi * i / n)))
 
     polygon(q)
+
+def elips2(x,y,a,b):
+    q=[]
+    n = 50
+    for i in range(n):
+        q.append((x + a * math.cos(2 * math.pi * i / n), y +b * math.sin(2 * math.pi * i / n)))
+
+    polyline(q)
 
 brushColor(86,86,86)
 penColor(86,86,86)
@@ -93,6 +101,18 @@ for i in range(n):
 
 polygon(q)
 
+elips2(324,440,9,3)
+elips2(313,453,8,7)
+brushColor(87,87,87)
+elips(317,445,5,6)
+elips2(305,459,8,3)
+elips2(298,463,4,4)
+elips2(290,467,10,3)
+elips2(276,469,7,3)
+elips2(265,467,9,1)
+elips2(256,467,5,6)
+elips2(247,470,7,2)
+elips2(239,475,9,4)
 
 
 
